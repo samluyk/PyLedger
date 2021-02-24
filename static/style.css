@@ -1,0 +1,104 @@
+/* Basic Background and Font Color */
+h1 {
+  color: orange;
+  background-color: #222227;
+  margin: auto;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  margin: auto;
+  text-align: center;
+  background-color: #222227;
+  color: #3b61f1;
+  font-family: 'Ubuntu', sans-serif;
+}
+hr.new1 {
+ border-top: 5px solid white;
+} 
+
+/* CSS Button Related Stuff */
+
+input[type=text], select {
+  width: 20%;
+  padding: 5px 6px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #222227;
+  color: white;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: #3b61f1;
+  color: white;
+  padding: 6px 8px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=button] {
+  width: 15%;
+  background-color: #3b61f1;
+  color: white;
+  padding: 6px 8px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+/* Local Ubuntu Font */
+@font-face {
+  font-family: 'UBUNTU';
+  src: url('./Ubuntu-Regular.ttf');
+  src: local('UBUNTU'), url('./Ubuntu-Regular.ttf') format('truetype'), url('./Ubuntu-Regular.ttf') format('truetype');
+}
+
+/* Table CSS */
+
+table {  
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 75%; 
+    border-collapse: 
+    collapse; border-spacing: 0; 
+}
+
+td, th {  
+    border: 1px solid transparent; /* No more visible border */
+    height: 30px; 
+    transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {  
+    background: #b5c6ff;  /* Darken header a bit */
+    font-weight: bold;
+}
+
+td {  
+    background: #d8e0eb;
+    text-align: center;
+}
+
+/* Cells in even rows are one color */        
+tr:nth-child(even) td { background: #ededed; }   
+
+/* Cells in odd rows are another (excludes header cells)  */        
+tr:nth-child(odd) td { background: #bdbdbd; }  
+
+tr td:hover { background: #666; color: #FFF; }  
+/* Hover cell effect! */
