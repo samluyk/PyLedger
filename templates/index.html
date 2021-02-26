@@ -13,8 +13,24 @@
 <body>
 <br>
 <center>
-<form>
 
+<p>
+    {% if breed %}
+    The breed you entered is {{breed}}
+    update it in the form below:
+    {% else %}
+    Please enter your breed:
+    {% endif %}
+</p>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.breed.label }}{{ form.breed() }}
+    {{ form.submit() }}
+</form>
+
+
+<!--
+<form>
 <h2>Input the expense:</h2>
 Expense: <input type="text" name="" value=""><br>
 Amount: <input type="number" name="" value=""><br>
@@ -33,7 +49,7 @@ Secondary Category: <select name="secondaryexpensecategory">
 
 <input type="submit" name="" value="Submit Expense"><br>
 </form>
-
+-->
 </body>
 <hr class="new1">
 <footer>
