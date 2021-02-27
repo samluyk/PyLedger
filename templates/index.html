@@ -13,18 +13,24 @@
 <body>
 <br>
 <center>
-
+<!---
 <p>
-    {% if breed %}
-    The breed you entered is {{breed}}
+    {% if theExpense %}
+    The expense you entered is {{theExpense}}
     update it in the form below:
     {% else %}
-    Please enter your breed:
+    Please enter your expense:
     {% endif %}
 </p>
+-->
 <form method="POST">
     {{ form.hidden_tag() }}
-    {{ form.breed.label }}{{ form.breed() }}
+    {{ form.theExpense.label }}{{ form.theExpense() }}
+    <br>
+    {{ form.expenseAmount.label }}{{ form.expenseAmount() }}   
+    <br> 
+    {{ form.expenseAbout.label }}{{ form.expenseAbout() }}  
+    <br>
     {{ form.submit() }}
 </form>
 
