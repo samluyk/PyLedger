@@ -1,7 +1,12 @@
+import os
 from flask import Flask, render_template,session,redirect,url_for
+from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField,FloatField,DateField,validators,TextField,SelectField
 from wtforms.validators import DataRequired
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+print(basedir)
 
 app = Flask(__name__)
 
@@ -25,8 +30,6 @@ def index():
         session['theExpense'] = form.theExpense.data
         session['expenseAmount'] = form.expenseAmount.data
         session['expenseAbout'] = form.expenseAbout.data
-        #theExpense = form.theExpense.data
-        #form.theExpense.data = ''
         return redirect(url_for('submitted'))
 
     return render_template('index.html',form=form)
