@@ -15,16 +15,18 @@
 <center>
 
 <form method="POST">
+    <h4>Expense Input Form:</h4>
+    <br>
     {{ form.hidden_tag() }}
     {{ form.theExpense.label }}{{ form.theExpense() }}
-    <br>
+    <br><br>
     {{ form.expenseAmount.label }}{{ form.expenseAmount() }}   
-    <br> 
+    <br><br>
     {{ form.expenseAbout.label }}{{ form.expenseAbout() }}  
-    <br>
+    <br><br>
     {{ form.submit() }}
 </form>
-
+<hr class="new1">
 
 </body>
 <hr class="new1">

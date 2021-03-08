@@ -1,3 +1,4 @@
+# Import statements
 import os
 from flask import Flask, render_template,session,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -17,8 +18,8 @@ class ExpenseForm(FlaskForm):
 
     theExpense = StringField("Enter your expense: ",validators=[DataRequired()])
     expenseAmount = FloatField("Enter the amount: ",validators=[DataRequired()])
-    #expensePrimaryCategory = StringField("Choose the primary category: ",validators=[DataRequired()])
-    #expenseSecondaryCategory = StringField("Choose the secondary category: ",validators=[DataRequired()])
+    expensePrimaryCategory = StringField("Choose the primary category: ",validators=[DataRequired()])
+    expenseSecondaryCategory = StringField("Choose the secondary category: ",validators=[DataRequired()])
     expenseAbout = TextField("Enter any comments: ")
     submit = SubmitField('Submit')
 
